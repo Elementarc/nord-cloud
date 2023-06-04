@@ -1,0 +1,6 @@
+runtime: nodejs18 # Use the appropriate Node.js version here
+
+env_variables:
+  ENVIRONMENT: production
+
+entrypoint: npm start
