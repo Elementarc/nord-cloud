@@ -52,4 +52,6 @@ To deploy your application on GCP, follow these steps:
 
 4. Update the `deploy` script in your `package.json` file to execute the `gcloud` command with the appropriate parameters: `gcloud app deploy --service-account=SERVICE_ACCOUNT_MAIL --project=PROJECT_ID`.
 
-5. Choose a region to deploy your application. Once deployment is complete, you can visit the public URL to access your application.
+5. Run the script
+   `npm run deploy`
+6. Choose a region to deploy your application. Once deployment is complete, you can visit the public URL to access your application.
