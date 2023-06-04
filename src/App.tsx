@@ -10,7 +10,6 @@ import {
   InlineDiv,
   Input,
   ResponsiveDiv,
-  ViewPortDiv,
 } from "./Components";
 import {
   INetworkStation,
@@ -160,7 +159,7 @@ function App() {
 
     const responseJSX = [];
     for (const [Key, Value] of SolutionMap) {
-      if (Value.Speed && Value.NetworkStation) {
+      if (Value.Speed > 0 && Value.NetworkStation) {
         responseJSX.push(
           <Grid item xs={1} key={Key}>
             <Typography variant="body1">{`Best Network station for point: ${Key} is: `}</Typography>
@@ -188,6 +187,7 @@ function App() {
         container
         columns={{ xs: 1, sm: 1, md: 1 }}
         rowGap={2}
+        columnGap={2}
       >
         {responseJSX}
       </Grid>
@@ -195,7 +195,7 @@ function App() {
   }, [DeviceCoordinates]);
 
   return (
-    <ViewPortDiv>
+    <BlockDiv>
       <CenterDiv>
         <ResponsiveDiv>
           <BlockDiv>
@@ -229,7 +229,7 @@ function App() {
           </BlockDiv>
         </ResponsiveDiv>
       </CenterDiv>
-    </ViewPortDiv>
+    </BlockDiv>
   );
 }
 

@@ -9,7 +9,7 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "test": "jest",
-    "deploy": "gcloud app deploy --service-account=main-account@nord-cloud-388812.iam.gserviceaccount.com --project=nord-cloud-388812"
+    "deploy": "gcloud app deploy --service-account=SERVICE_ACCOUNT_MAIL --project=PROJECT_ID"
   },
   "dependencies": {
     "@ampproject/remapping": "^2.2.1",
